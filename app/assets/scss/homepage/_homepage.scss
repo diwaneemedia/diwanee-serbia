@@ -6,12 +6,13 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 .header {
   width: 100%;
   height: 60px;
-  background: gray;
-  color:white;
+  color:black;
   line-height: 60px;
 }
 .header__logo {
@@ -26,6 +27,9 @@
 }
 .header__banner {
   width: 100%;
+  position: relative;
+  z-index: 0;
+  margin-top: -60px;
 }
 .page-wrapper {
   @extend .header__wrapper;
@@ -33,7 +37,7 @@
 .section {
   width: 100%;
   height: 300px;
-  background: pink;
+  background: #ECECEC;
   border:1px solid #bababa;
   text-align: center;
   line-height: 300px;
