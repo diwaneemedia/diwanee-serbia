@@ -7,7 +7,7 @@ $base__line: 20 !default;
 
 @font-face {
     font-family: 'Uni Sans';
-    src: url('/ui/uni-sans-heavy.otf') format('opentype'),
+    src: url('../../assets/font/uni-sans-heavy.otf') format('opentype'),
 }
 html {
   font-family: $text__family--UniSans;
