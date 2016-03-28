@@ -12,13 +12,16 @@
 }
 .header {
   width: 100%;
-  height: 60px;
+  height: calc-rem(60px);
   color:black;
-  line-height: 60px;
+  line-height:calc-rem( 60px);
 }
 .header__logo {
   width: 104px;
   margin-top: 15px;
+  @include breakpoint(large){
+    width: 158px;
+  }
 }
 .nav {
   float:right;
@@ -29,13 +32,14 @@
   font-weight: 300;
   font-weight: 300;
   margin-left: 54px;
+  font-size:calc-rem(12px);
 }
 .header__banner {
   display: block;
   width: 100%;
   position: relative;
   z-index: 0;
-  margin-top: -61px;
+  margin-top: calc-rem(-61px);
 }
 .content-wrapper {
   @extend .header__wrapper;
@@ -44,13 +48,17 @@
   width: 100%;
   text-align: center;
   color:#959595;
-  font-size: 36px;
+  font-size:calc-rem( 36px);
 }
 .section--quote, .section--brands {
   background: #F8F7F5;
 }
 .section--audience {
-  background: black;
+  background-image:url(../../assets/img/people.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: #F8F7F5;
+  background-repeat: no-repeat;
 }
 .section--brands {
   padding-bottom: 119px;
@@ -60,38 +68,38 @@
 }
 
 .quote {
-  font-size: 31px;
-  line-height: 44px;
-  padding: 94px;
-  color: #333
+  font-size:calc-rem( 31px);
+  line-height:calc-rem( 44px);
+  padding: calc-rem(106px);
+  color: #323232
 }
 h2 {
   font-family:$text__family--UniSans;
-  font-size: 47px;
-  color:#333;
+  font-size:calc-rem( 47px);
+  color:#323232;
 }
 .about__heading {
-  color:#333;
+  color:#323232;
   padding: 141px 0 71px;
 }
 .about__text--center {
-  text-align: left;
-  color: #333;
-  line-height: 38px;
-  font-size: 30px;
-  padding-left: 38px;
+  // text-align: left;
+  color: #323232;
+  line-height:calc-rem( 38px);
+  font-size:calc-rem( 30px);
+  // padding-left: 38px;
   margin-bottom: 72px;
-  border-left: 2px solid red;
+  // border-left: 2px solid red;
 }
 .about__text--left, .about__text--right {
   text-align: left;
   width: 50%;
   float: left;
   p {
-    line-height: 20px;
-    font-size: 15px;
+    line-height:calc-rem( 22.5px);
+    font-size:calc-rem( 15px);
     padding-bottom: 25px;
-    color: #333;
+    color: #323232;
   }
 }
 .about__text--left {
@@ -101,8 +109,9 @@ h2 {
   padding-left: 17px;
 }
 .audience__heading {
-    color: white;
-    padding: 87px 0;
+    padding:  0;
+    padding-top:calc-rem(87px);
+    padding-bottom: calc-rem(176px);
 }
 .audience__item {
   display: inline-block;
@@ -114,11 +123,13 @@ h2 {
 .audience__info {
   color:#14c7e2;
   font-family: $text__family--UniSans;
-  font-size: 44px;
+  font-size:calc-rem( 44px);
   margin-top: 10px;
 }
 .brands__heading {
   padding: 96px 0 82px;
+  padding-top: calc-rem(142px);
+  padding-bottom: calc-rem(42px);
 }
 .brands__row {
   width: 100%;
@@ -130,10 +141,18 @@ h2 {
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 392px;
   float: left;
   cursor: pointer;
   margin: 13px;
+  @include transitionFor(background-size 100ms ease-in);
+  img {
+    width: 270px;
+    -webkit-backface-visibility: hidden;
+  }
+  &:hover {
+    background-size:382px;
+  }
 }
 .brand--first {
   margin-left: 0px;
@@ -182,12 +201,14 @@ h2 {
 }
 .jobs__heading {
   padding: 133px 0 78px;
+  padding-top: calc-rem(118px);
+  padding-bottom: calc-rem(52px);
 }
 .jobs__text {
-  font-size: 29px;
-  color: #333;
+  font-size:calc-rem( 29px);
+  color: #323232;
   padding: 0 20px;
-  line-height: 37px;
+  line-height:calc-rem( 37px);
   margin-bottom: 128px;
 }
 .job {
@@ -197,26 +218,26 @@ h2 {
 }
 .job__heading {
   text-align: left;
-  font-size: 22px;
-  color: #333;
+  font-size:calc-rem( 22px);
+  color: #323232;
   font-weight: 400;
   margin-bottom: 21px;
 }
 .job__text {
-  font-size: 16px;
+  font-size:calc-rem( 16px);
   text-align: left;
-  line-height: 22px;
+  line-height:calc-rem( 22px);
   width: 70%;
   float:left;
 }
 .job__button {
   float: right;
   width: 150px;
-  height: 40px;
-  line-height: 40px;
-  background: #333;
+  height: calc-rem(40px);
+  line-height:calc-rem( 40px);
+  background: #323232;
   color: white;
-  font-size: 15px;
+  font-size:calc-rem( 15px);
 }
 .tag__container {
   width: 100%;
@@ -224,9 +245,9 @@ h2 {
   margin-top: 26px;
 }
 .tag {
-  color: #C71B1B;
+  color: #C41230;
   float: left;
-  font-size: 14px;
+  font-size:calc-rem( 14px);
   font-weight: 400;
   margin-right: 8px;
 }
@@ -237,7 +258,7 @@ h2 {
 }
 .pre-footer {
   height: 96px;
-  background: #333333;
+  background: #323232;
 }
 .social {
   float: left;
@@ -258,7 +279,7 @@ h2 {
   width: 100%;
   display: block;
   height: 29px;
-  line-height: 18px;
+  line-height:calc-rem( 18px);
   margin-bottom: 9px;
 }
 .location__pin {
@@ -274,11 +295,26 @@ h2 {
   margin: 111px 144px;
 }
 .footer__copyright {
-  border-top: 1px solid #9b9b9b;
+  border-top: 1px solid #777;
   height: 50px;
-  line-height: 50px;
-  color: #9b9b9b;
+  line-height:calc-rem( 50px);
+  color: #777;
   text-align: left;
   /* float: left; */
-  font-size: 12px;
+  font-size:calc-rem( 12px);
+}
+.webedia-logo {
+  float: right;
+  width: 100px;
+  margin-top: 9px;
+}
+.quote__mark {
+  font-size: 217px;
+  position: absolute;
+  font-family: helvetica;
+  margin-left: -116px;
+  margin-top: 34px;
+  letter-spacing: -3px;
+  font-weight: 600;
+  color: #E5E4E2;
 }

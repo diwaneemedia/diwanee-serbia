@@ -1,6 +1,6 @@
 $text__family--Roboto:  'Roboto', sans-serif;
 $text__family--UniSans:  'Uni Sans', sans-serif;
-$base__font-size: 16px !default;
+$base__font-size: 15px !default;
 $base__line: 20 !default;
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
@@ -13,5 +13,8 @@ html {
   font-family: $text__family--Roboto;
 	font-size: $base__font-size;
   font-weight:300;
-  color: #333
+  color: #333;
+  @include breakpoint(large){
+    font-size:20px;
+  }
 }
