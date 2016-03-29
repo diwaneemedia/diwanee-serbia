@@ -1,13 +1,13 @@
 $text__family--Roboto:  'Roboto', sans-serif;
-$text__family--UniSans:  'Uni Sans', sans-serif;
+$text__family--UniSans:  'Roboto', sans-serif;
 $base__font-size: 15px !default;
 $base__line: 20 !default;
 
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 
 @font-face {
-    font-family: $text__family--Roboto;
-    src: url('../../assets/font/uni-sans-heavy.otf') format('opentype'),
+    font-family: 'Uni Sans', sans-serif;
+    src: url('../../font/uni-sans-heavy.otf') format('opentype'),
 }
 html {
   font-family: $text__family--Roboto;

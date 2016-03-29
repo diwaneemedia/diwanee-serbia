@@ -8,6 +8,7 @@ var gulp = require("gulp"),
     sass = require("gulp-sass"),
     plumber = require("gulp-plumber"),
     browserSync = require("browser-sync"),
+    imageOptim = require('gulp-imageoptim'),
     reload = browserSync.reload;
 
 // /////////////////////////////////////////////////
@@ -66,6 +67,14 @@ gulp.task("watch",function(){
   gulp.watch("app/**/*.html",['html']);
 });
 
+// ////////////////////////////////////////
+// Images Task
+// /////////////////////////////////////////
+gulp.task('images', function() {
+    return gulp.src('app/assets/src/img/**/*')
+        .pipe(imageOptim.optimize())
+        .pipe(gulp.dest('app/assets/img'));
+});
 
 // /////////////////////////////////////////////////
 // Default Task

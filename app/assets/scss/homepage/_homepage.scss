@@ -1,6 +1,5 @@
 .header__container  {
   width: 100%;
-  background: orange;
 }
 .header__wrapper {
   width: 100%;
@@ -8,31 +7,54 @@
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  overflow: hidden;
 }
 .header {
   width: 100%;
   height: calc-rem(60px);
   color:black;
   line-height:calc-rem( 60px);
+  @include breakpoint(mobile) {
+    height: auto;
+    line-height: 50px;
+    float: left;
+  }
 }
 .header__logo {
-  width: 104px;
+  width: 110px;
   margin-top: 15px;
-  @include breakpoint(large){
+  @include breakpoint(large) {
     width: 158px;
+  }
+  @include breakpoint(mobile) {
+    width: 90px;
+    margin-left: 15px;
   }
 }
 .nav {
   float:right;
+  @include breakpoint(mobile) {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
 }
 .nav__item {
   display: inline;
   font-family: $text__family--Roboto;
-  font-weight: 300;
-  font-weight: 300;
+  font-weight: 500;
   margin-left: 54px;
   font-size:calc-rem(12px);
+  cursor: pointer;
+  @include breakpoint(mobile){
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin: 0;
+  }
+}
+.banner__container {
+  width: 100%;
+  float: left;
 }
 .header__banner {
   display: block;
@@ -40,18 +62,35 @@
   position: relative;
   z-index: 0;
   margin-top: calc-rem(-61px);
+  @include breakpoint(mobile){
+    display: none;
+  }
+}
+.header__banner--mobile {
+  display: none;
+  width: 100%;
+  @include breakpoint(mobile){
+    display: block;
+  }
 }
 .content-wrapper {
   @extend .header__wrapper;
+  overflow: hidden;
 }
 .section {
   width: 100%;
   text-align: center;
   color:#959595;
   font-size:calc-rem( 36px);
+  @include breakpoint(mobile) {
+    float: left;
+  }
 }
 .section--quote, .section--brands {
   background: #F8F7F5;
+}
+.section--quote {
+  float: left;
 }
 .section--audience {
   background-image:url(../../assets/img/people.jpg);
@@ -59,37 +98,79 @@
   background-position: center;
   background-color: #F8F7F5;
   background-repeat: no-repeat;
+  @include breakpoint(mobile) {
+    padding-bottom: 30px;
+  }
 }
 .section--brands {
   padding-bottom: 119px;
+  overflow: hidden;
+  @include breakpoint(mobile) {
+    padding-bottom: 0;
+  }
 }
 .section--about {
   padding-bottom: 120px;
+  overflow: hidden;
 }
 
 .quote {
   font-size:calc-rem( 31px);
   line-height:calc-rem( 44px);
   padding: calc-rem(106px);
-  color: #323232
+  color: #323232;
+  @include breakpoint(mobile){
+    display: none;
+  }
+}
+.quote--mobile {
+  font-size: 22px;
+  line-height: 30px;
+  padding: 33px 30px;
+  color: #323232;
+  display: block;
+  font-weight: 300;
+  display: none;
+  @include breakpoint(mobile){
+    display: block;
+  }
+  .quote__mark {
+    font-size: 73px;
+    position: absolute;
+    font-family: helvetica;
+    margin-left: -32px;
+    margin-top: 13px;
+    letter-spacing: -3px;
+    font-weight: 500;
+    color: #E5E4E2;
+  }
 }
 h2 {
   font-family:$text__family--UniSans;
+  font-weight: 900;
   font-size:calc-rem( 47px);
   color:#323232;
+  @include breakpoint(mobile){
+    font-size: 31px;
+    font-weight: 400;
+  }
 }
 .about__heading {
   color:#323232;
   padding: 141px 0 71px;
+  @include breakpoint(mobile){
+    padding: 65px 0 42px;
+  }
 }
 .about__text--center {
-  // text-align: left;
   color: #323232;
   line-height:calc-rem( 38px);
   font-size:calc-rem( 30px);
-  // padding-left: 38px;
   margin-bottom: 72px;
-  // border-left: 2px solid red;
+  @include breakpoint(mobile) {
+    font-size: 24px;
+    line-height: 34px;
+  }
 }
 .about__text--left, .about__text--right {
   text-align: left;
@@ -100,6 +181,14 @@ h2 {
     font-size:calc-rem( 15px);
     padding-bottom: 25px;
     color: #323232;
+  }
+  @include breakpoint(mobile) {
+    width: 100%;
+    padding: 0 10px !important;
+    p {
+      font-size: 16px;
+      line-height: 28px;
+    }
   }
 }
 .about__text--left {
@@ -112,24 +201,74 @@ h2 {
     padding:  0;
     padding-top:calc-rem(87px);
     padding-bottom: calc-rem(176px);
+    @include breakpoint(mobile) {
+      padding-top:calc-rem(75px);
+      padding-bottom: calc-rem(63px);
+    }
 }
 .audience__item {
   display: inline-block;
   padding: 18px 60px 151px;
-  img {
-    width: 55px;
+  @include breakpoint(mobile) {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 33px;
+  }
+}
+.audience__content {
+  margin-top: 10px;
+  @include breakpoint(mobile) {
+    margin-top:0;
+  }
+}
+.audience__info--number {
+  color:#14c7e2;
+  font-family: $text__family--UniSans;
+  font-weight: 900;
+  font-size:calc-rem( 44px);
+  float: left;
+  @include breakpoint(mobile) {
+    font-size: 50px;
+  }
+}
+.audience__image {
+  @include breakpoint(mobile) {
+    width: 34%;
+    float: left;
+    padding: 0 9%;
+  }
+}
+.audience__icon {
+  width: 70px;
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+  @include breakpoint(large) {
+    width: 85px;
   }
 }
 .audience__info {
-  color:#14c7e2;
-  font-family: $text__family--UniSans;
-  font-size:calc-rem( 44px);
-  margin-top: 10px;
+  font-size: calc-rem(20px);
+  float: left;
+  text-align: left;
+  margin-left: 12px;
+  color:#323232;
+  font-weight: 500;
+  @include breakpoint(mobile) {
+    font-size: 17px;
+    font-weight: bold;
+    margin-left: 17px;
+  }
+  @include breakpoint(large) {
+  }
 }
 .brands__heading {
   padding: 96px 0 82px;
   padding-top: calc-rem(142px);
   padding-bottom: calc-rem(42px);
+  @include breakpoint(mobile) {
+    padding: 78px 0 27px;
+  }
 }
 .brands__row {
   width: 100%;
@@ -150,8 +289,14 @@ h2 {
     width: 270px;
     -webkit-backface-visibility: hidden;
   }
-  &:hover {
-    background-size:382px;
+  @include breakpoint(mobile) {
+    height: 100vw;
+    width: 100vw;
+    margin:0;
+    img {
+      width: 69%;
+      max-width: 240px;
+    }
   }
 }
 .brand--first {
@@ -198,11 +343,22 @@ h2 {
   padding-left: 86px;
   margin-bottom: 167px;
   overflow: hidden;
+  padding: 0 240px;
+  @include breakpoint(mobile) {
+    padding:0;
+  }
+  @include breakpoint(large) {
+    padding: 0 120px;
+  }
 }
 .jobs__heading {
   padding: 133px 0 78px;
   padding-top: calc-rem(118px);
   padding-bottom: calc-rem(52px);
+  @include breakpoint(mobile) {
+    padding: 67px 0 30px;
+
+  }
 }
 .jobs__text {
   font-size:calc-rem( 29px);
@@ -210,18 +366,32 @@ h2 {
   padding: 0 20px;
   line-height:calc-rem( 37px);
   margin-bottom: 128px;
+  @include breakpoint(mobile) {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 94px;
+  }
 }
 .job {
   overflow: hidden;
   float: left;
   margin-bottom: 89px;
+  width: 100%;
+  @include breakpoint(mobile) {
+    padding:0 10px;
+  }
 }
 .job__heading {
   text-align: left;
   font-size:calc-rem( 22px);
   color: #323232;
   font-weight: 400;
-  margin-bottom: 21px;
+  width: 71%;
+  float: left;
+  @include breakpoint(mobile) {
+    width: 100%;
+    margin-bottom: 23px;
+  }
 }
 .job__text {
   font-size:calc-rem( 16px);
@@ -229,6 +399,7 @@ h2 {
   line-height:calc-rem( 22px);
   width: 70%;
   float:left;
+  display: none;
 }
 .job__button {
   float: right;
@@ -237,12 +408,33 @@ h2 {
   line-height:calc-rem( 40px);
   background: #323232;
   color: white;
-  font-size:calc-rem( 15px);
+  font-size:calc-rem( 13px);
+  text-decoration: none;
+  @include transitionFor(background-color 500ms);
+  &:hover {
+    background: #393939;
+  }
+  @include breakpoint(mobile) {
+    margin: 0 auto;
+    float: none;
+    display: table;
+  }
 }
 .tag__container {
   width: 100%;
   float: left;
-  margin-top: 26px;
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.tag__container--mobile {
+  display: none;
+  @include breakpoint(mobile) {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+  }
 }
 .tag {
   color: #C41230;
@@ -250,30 +442,51 @@ h2 {
   font-size:calc-rem( 14px);
   font-weight: 400;
   margin-right: 8px;
+  @include breakpoint(mobile) {
+    font-size: 18px;
+  }
 }
 .footer {
   width: 100%;
   text-align: center;
   background: #2D2D2D;
+  overflow: hidden;
 }
 .pre-footer {
-  height: 96px;
   background: #323232;
+}
+.pre-footer__text {
+  color: #777777;
+  padding: 38px 0 28px;
+  font-size: calc-rem(16px);
 }
 .social {
   float: left;
   width: 100%;
+  margin-bottom: 19px;
 }
 .social__item {
-  margin-right: 37px;
-  margin-top: 27px;
+  margin-right: 14px;
+  margin-left: 13px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  height: 26px;
+  -webkit-backface-visibility: hidden;
+  @include transitionFor(opacity 500ms );
+  &:hover {
+    opacity: 0.8;
+  }
 }
 .location {
-  width: 25%;
-  float: left;
   color: white;
   text-align: left;
   margin-top: 111px;
+  margin: 111px 100px 53px;
+  display: inline-block;
+  vertical-align: top;
+  @include breakpoint(large){
+    margin: 111px 80px 53px;
+  }
 }
 .location__heading {
   width: 100%;
@@ -286,27 +499,35 @@ h2 {
   width: 10px;
   float: left;
   margin-right: 14px;
+  @include breakpoint(large) {
+    width: 15px;
+  }
 }
 .location__text {
   margin-bottom: 6px;
   color: #9b9b9b;
 }
-.location__middle {
-  margin: 111px 144px;
-}
 .footer__copyright {
-  border-top: 1px solid #777;
+  border-top: 1px solid #414141;
   height: 50px;
   line-height:calc-rem( 50px);
-  color: #777;
+  color: #505050;
   text-align: left;
   /* float: left; */
   font-size:calc-rem( 12px);
+  @include breakpoint(large){
+    height: 67px;
+    line-height: 67px;
+  }
 }
 .webedia-logo {
   float: right;
   width: 100px;
-  margin-top: 9px;
+  margin-top: 12px;
+  line-height: calc-rem(17px);
+  @include breakpoint(large){
+    margin-top: 21px;
+  }
 }
 .quote__mark {
   font-size: 217px;
