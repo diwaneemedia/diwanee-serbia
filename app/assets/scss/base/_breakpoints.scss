@@ -3,6 +3,9 @@
      @media (max-width: 640px)  { @content ; }
   }
   @if $point == medium {
+     @media (max-width: 900px)  { @content ; }
+  }
+  @if $point == xmedium {
      @media (max-width: 1300px)  { @content ; }
   }
   @if $point == large {

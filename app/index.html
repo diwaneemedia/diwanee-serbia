@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
   <link rel="stylesheet" href="assets/css/style.css">
   <title>Diwanee Serbia</title>
 </head>
@@ -19,6 +20,14 @@
           <li onclick='scrollTo("#brands",1200)' class="nav__item">OUR BRANDS</li>
           <li onclick='scrollTo("#jobs",1600)' class="nav__item">JOBS</li>
           <li onclick='scrollTo("#contact",1800)' class="nav__item">CONTACT</li>
+          <li class="nav__item social--mobile">
+            <p class='pre-footer__text'>Let's get connected!</p>
+            <ul class="social">
+              <a href="https://www.facebook.com/diwaneeserbia/"><img src='assets/img/fbico.png' class="social__item"></a>
+              <a href="https://www.linkedin.com/company/700371"><img src='assets/img/inico.png' class="social__item"></a>
+              <a href="https://twitter.com/diwaneeserbia"><img src='assets/img/twittico.png' class="social__item"></a>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -29,7 +38,7 @@
   </div>
     <div class="section section--quote">
       <p class="quote">
-        <span class='quote__mark'>‘‘</span>
+        <span class='quote__mark' >‘‘</span>
         We are building the future of digital media. <br />
         We are developers, advertisers, journalists, opinion-leaders. <br />
         We are passionate about technology and content. <br />
@@ -45,27 +54,19 @@
         <p class="about__text--center">
           Diwanee, is a digital media company <br />that specializes in content creation targeting <br /> women in the Middle East
         </p>
-        <div class="about__text--left">
-          <p>With predominantly female readership we create and distribute original, high
-
-quality and trusted content focused on beauty, fashion, health, entertainment,
-
-and social media. With our brands (Yasmina, 3a2ilati, Mashaheeri, Mazyun,
-
-Atyab Tabkha …) we are reaching over 8 million unique users on a monthly
-
-basis, and 29 million page views.</p>
-          <p>
-            Diwanee partners with YouTube to create the only regional female multi channel network called “Duniati” - “My world” targeting Arabic speaking women around the world and   aggregating over 40 top female influencers.
-          </p>
-          <p>With all our brands we have over 38 million fans across social channels.</p>
+        <div class="about__container">
+          <div class="about__text--left">
+            <p class='about__text--first'>With predominantly female readership we create and distribute original, high quality and trusted content focused on beauty, fashion, health, entertainment, and social media. With our brands (Yasmina, 3a2ilati, Mashaheeri, Mazyun, Atyab Tabkha …) we are reaching over 8 million unique users on a monthly basis, and 29 million page views.</p>
+            <p>Diwanee partners with YouTube to create the only regional female multi channel network called “Duniati” - “My world” targeting Arabic speaking women around the world and   aggregating over 40 top female influencers.</p>
+            <p>With all our brands we have over 38 million fans across social channels.</p>
+          </div>
+          <div class="about__text--right">
+            <p>Diwanee was established in 2009 and operates from Dubai, Beirut and since 2011 from Belgrade. Belgrade is Diwanee's technology development center and we are therefore constantly seeking for new talents and hiring throughout the year.</p>
+            <p>Our most prized technological accomplishment is a modern media stack platform, named Harmony, created with a lot of passion and knowledge. The platform was built from ground up, for digital-native authoring, publishing, advertising and distribution. We made Harmony the core of our business, so that we could distribute content to our readers on any device and on any platform.</p>
+            <p>In 2014, a digital publishing conglomerate Webedia, based in Paris, France, acquired majority stake in Diwanee.</p>
+          </div>
         </div>
-        <div class="about__text--right">
-          <p>Diwanee was established in 2009 and operates from Dubai, Beirut and since 2011 from Belgrade.
-Belgrade is Diwanee's technology development center and we are therefore constantly seeking for new talents and hiring throughout the year.</p>
-          <p>Our most prized technological accomplishment is a modern media stack platform, named Harmony, created with a lot of passion and knowledge. The platform was built from ground up, for digital-native authoring, publishing, advertising and distribution. We made Harmony the core of our business, so that we could distribute content to our readers on any device and on any platform.</p>
-          <p>In 2014, a digital publishing conglomerate Webedia, based in Paris, France, acquired majority stake in Diwanee.</p>
-        </div>
+        <div class="read-more-button" onclick="viewMore()">READ MORE</div>
       </div>
     </div>
     <div class="section section--audience">
@@ -191,6 +192,7 @@ Belgrade is Diwanee's technology development center and we are therefore constan
             <p class="job__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro natus laboriosam aspernatur, iste aliquam deleniti laudantium quas at nihil, earum!</p>
             <div class="tag__container--mobile">
               <div class="tag">#PHP</div>
+              <div class="tag">#OOP</div>
             </div>
             <a target='_blank' href='https://poslovi.infostud.com/posao/Senior-PHP-Developer/Diwanee-Serbia-d.o.o/138149?dist=0&q=diwanee&item_index=2' class="job__button">APPLY NOW</a>
             <div class="tag__container">
@@ -220,8 +222,8 @@ Belgrade is Diwanee's technology development center and we are therefore constan
         </ul>
       </div>
     </div>
-    <ul class="content-wrapper">
-      <li class="location">
+    <ul class="content-wrapper location--wrapper">
+      <li class="location location--first">
         <div class="location__heading">
           <img src="assets/img/tag-pin.png" class='location__pin' alt="">
           <p class='city'>DUBAI</p>
@@ -242,7 +244,7 @@ Belgrade is Diwanee's technology development center and we are therefore constan
         <p class="location__text">T: 961 1 - 660327</p>
         <p class="location__text">F: 961 1 - 660153</p>
       </li>
-      <li class="location">
+      <li class="location location--last">
         <div class="location__heading">
           <img src="assets/img/tag-pin.png" class='location__pin' alt="">
           <p class='city'>BELGRADE</p>
