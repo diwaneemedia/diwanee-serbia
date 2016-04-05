@@ -1,11 +1,4 @@
-// Scroll to section
-function scrollTo(sectionId, speed, offset){
-  offset = offset || 50;
 
-  $('html, body').animate({
-      scrollTop: $(sectionId).offset().top + offset
-  }, speed);
-}
 // View more
 var position_on_click = 0;
 function viewMore(){
@@ -22,6 +15,15 @@ function viewMore(){
     scrollTo("#about",0, 1);
   }
 }
+function scrollTo(sectionId, speed, offset, event){
+  offset = offset || 50;
+  console.log("something");
+  $('body,html').animate({
+      scrollTop: $(sectionId).offset().top + offset
+  }, speed);
+  return false;
+}
+
 // On scroll header__container background opacity
 var scroll;
 $(function(){
@@ -39,6 +41,7 @@ $(function(){
     }
   });
 });
+
 // Nav menu functionality
 $(function(){
   $(".menu-ico").click(function(){
@@ -52,4 +55,9 @@ $(function(){
   } else {
     $(".about__container").css({"max-height":'auto'});
   }
+  // events
+  $(".about").click(function(){scrollTo('#about',800,0)});
+  $(".brands").click(function(){scrollTo('#brands',1200,0)});
+  $(".jobs").click(function(){scrollTo('#jobs',1600,0)});
+  $(".contact").click(function(){scrollTo('#contact',1800,0)});
 });
