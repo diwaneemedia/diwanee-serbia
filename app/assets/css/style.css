@@ -132,6 +132,9 @@ html {
   .menu-ico.active {
     background-image: url(../../assets/img/close-ico.png); }
 
+.jobs-page .menu-ico {
+  display: none; }
+
 .nav {
   float: right;
   -webkit-transition: max-height 0.5s linear;
@@ -187,6 +190,15 @@ html {
   float: left;
   background: #f7f7f7; }
 
+.jobs-page .banner__container {
+  margin-top: -15%; }
+  @media (max-width: 640px) {
+    .jobs-page .banner__container {
+      margin-top: 0; } }
+
+.jobs-page .header__container {
+  background: white; }
+
 .header__banner {
   display: block;
   width: 100%;
@@ -205,6 +217,160 @@ html {
 
 .content-wrapper {
   overflow: hidden; }
+
+.footer {
+  width: 100%;
+  text-align: center;
+  background: #2D2D2D;
+  overflow: hidden; }
+
+.pre-footer {
+  background: #323232; }
+
+.pre-footer__text {
+  color: #777777;
+  padding: 38px 0 28px;
+  font-size: 1.06667rem; }
+  @media (max-width: 640px) {
+    .pre-footer__text {
+      font-size: 20px;
+      padding-bottom: 16px;
+      font-size: 15px; } }
+
+.social {
+  float: left;
+  width: 100%;
+  margin-bottom: 19px; }
+
+.social__item {
+  margin-right: 14px;
+  margin-left: 13px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  height: 26px;
+  -webkit-backface-visibility: hidden;
+  -webkit-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  -ms-transition: opacity 500ms;
+  transition: opacity 500ms; }
+  .social__item:hover {
+    opacity: 0.8; }
+  @media (max-width: 640px) {
+    .social__item {
+      height: 25px; } }
+
+.location {
+  color: white;
+  text-align: left;
+  margin-top: 111px;
+  margin: 111px 100px 53px;
+  display: inline-block;
+  vertical-align: top; }
+  @media (min-width: 2000px) {
+    .location {
+      margin: 111px 80px 53px; } }
+  @media (max-width: 1300px) {
+    .location {
+      margin: 0 5.5%;
+      margin-top: 111px;
+      margin-bottom: 80px; } }
+  @media (max-width: 900px) {
+    .location {
+      margin: 0;
+      margin-top: 111px;
+      margin-bottom: 80px; } }
+  @media (max-width: 640px) {
+    .location {
+      margin: 78px 0 0;
+      width: 100%; } }
+
+@media (max-width: 900px) {
+  .location--first {
+    float: left; } }
+
+@media (max-width: 900px) {
+  .location--last {
+    float: right; } }
+
+@media (max-width: 900px) {
+  .location--wrapper {
+    padding: 0 40px; } }
+
+.location__heading {
+  width: 100%;
+  display: block;
+  height: 29px;
+  line-height: 1.2rem;
+  margin-bottom: 9px; }
+  @media (max-width: 640px) {
+    .location__heading {
+      width: 130px;
+      margin: 0 auto; } }
+
+.location__pin {
+  width: 10px;
+  float: left;
+  margin-right: 14px; }
+  @media (min-width: 2000px) {
+    .location__pin {
+      width: 15px; } }
+  @media (max-width: 640px) {
+    .location__pin {
+      width: 15px;
+      margin-top: -3px;
+      margin-right: 10px; } }
+
+.location__text {
+  margin-bottom: 6px;
+  color: #9b9b9b; }
+  @media (max-width: 640px) {
+    .location__text {
+      text-align: center;
+      font-size: 18px;
+      line-height: 21px; } }
+
+.footer__copyright {
+  border-top: 1px solid #414141;
+  height: 50px;
+  line-height: 3.33333rem;
+  color: #505050;
+  text-align: left;
+  /* float: left; */
+  font-size: 0.8rem; }
+  @media (min-width: 2000px) {
+    .footer__copyright {
+      height: 67px;
+      line-height: 67px; } }
+  @media (max-width: 640px) {
+    .footer__copyright {
+      margin-top: 30px;
+      height: auto;
+      text-align: center; } }
+
+.webedia-logo {
+  float: right;
+  width: 115px;
+  margin-top: 9px;
+  line-height: 1.13333rem; }
+  @media (min-width: 2000px) {
+    .webedia-logo {
+      margin-top: 14px;
+      width: 135px; } }
+  @media (max-width: 640px) {
+    .webedia-logo {
+      float: none;
+      width: 115px;
+      margin-top: 20px; } }
+
+@media (max-width: 640px) {
+  .city {
+    font-size: 20px; } }
+
+.copyright {
+  float: left; }
+  @media (max-width: 640px) {
+    .copyright {
+      float: none; } }
 
 .section {
   width: 100%;
@@ -277,6 +443,17 @@ html {
     letter-spacing: -3px;
     font-weight: 500;
     color: #E5E4E2; }
+
+.quote__mark {
+  font-size: 217px;
+  position: absolute;
+  font-family: helvetica;
+  margin-left: -116px;
+  margin-top: 34px;
+  letter-spacing: -3px;
+  font-weight: 600;
+  color: #E5E4E2;
+  text-align: center; }
 
 h2 {
   font-family: "Uni Sans", sans-serif;
@@ -802,17 +979,6 @@ h2 {
       float: none;
       width: 115px;
       margin-top: 20px; } }
-
-.quote__mark {
-  font-size: 217px;
-  position: absolute;
-  font-family: helvetica;
-  margin-left: -116px;
-  margin-top: 34px;
-  letter-spacing: -3px;
-  font-weight: 600;
-  color: #E5E4E2;
-  text-align: center; }
 
 @media (max-width: 640px) {
   .city {

@@ -1,0 +1,63 @@
+.wrapper {
+  width:100%;
+  max-width: 810px;
+  padding: 0 20px;
+  margin:0 auto;
+  margin-bottom: calc-rem(150px);
+  @include breakpoint(mobile) {
+    padding:0 15px;
+    margin-bottom: calc-rem(100px);
+  }
+}
+.main-heading {
+  width: 100%;
+  text-align: center;
+  clear: both;
+  padding-top: calc-rem(94px);
+  padding-bottom: calc-rem(32px);
+  font-size: calc-rem(28px);
+  letter-spacing: 3.6px;
+  font-weight: 400;
+  line-height: calc-rem(38px);
+}
+.small__heading {
+  text-align: center;
+  font-size: calc-rem(28px);
+  margin-bottom: calc-rem(66px);
+  line-height: calc-rem(37px);
+}
+.jobs-page-info {
+  color: #CC0E0E;
+  text-align: center;
+  margin-bottom: calc-rem(69px);
+  font-size: calc-rem(15px);
+}
+.main-text {
+  font-size: calc-rem(15px);
+  line-height: calc-rem(31px);
+  margin-bottom: calc-rem(51px);
+  text-align: justify;
+}
+.list__heading {
+  margin-bottom: calc-rem(20px);
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: calc-rem(22px);
+}
+.list {
+  margin-bottom: calc-rem(49px);
+  margin-left: 25px;
+}
+.list--compressed {
+  @extend .list;
+  margin-left: 0;
+  .list__item {
+    list-style-type: none;
+    padding-bottom: 0;
+  }
+}
+.list__item {
+  padding-bottom: calc-rem(10px);
+  list-style-type: disc;
+  line-height: calc-rem(24px);
+}

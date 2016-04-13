@@ -27,19 +27,21 @@ function scrollTo(sectionId, speed, offset, event){
 // On scroll header__container background opacity
 var scroll;
 $(function(){
-  $(window).scroll(function(){
-    scroll = $(window).scrollTop();
-    if (scroll > 120){
-      $(".nav").removeClass("active");
-      $(".menu-ico").removeClass("active");
-    }
-    if (scroll>400){
-      $(".header__container").css({"background":"rgba(255,255,255,1)"},400);
-    } else {
-      var opacity = scroll/300;
-      $(".header__container").css({"background":'rgba(255,255,255,'+opacity+')'},400);
-    }
-  });
+  if($("body").hasClass("homepage")){
+    $(window).scroll(function(){
+      scroll = $(window).scrollTop();
+      if (scroll > 120){
+        $(".nav").removeClass("active");
+        $(".menu-ico").removeClass("active");
+      }
+      if (scroll>400){
+        $(".header__container").css({"background":"rgba(255,255,255,1)"},400);
+      } else {
+        var opacity = scroll/300;
+        $(".header__container").css({"background":'rgba(255,255,255,'+opacity+')'},400);
+      }
+    });
+  }
 });
 
 // Nav menu functionality
@@ -56,8 +58,8 @@ $(function(){
     $(".about__container").css({"max-height":'auto'});
   }
   // events
-  $(".about").click(function(){scrollTo('#about',800,0)});
-  $(".brands").click(function(){scrollTo('#brands',1200,0)});
-  $(".jobs").click(function(){scrollTo('#jobs',1600,0)});
-  $(".contact").click(function(){scrollTo('#contact',1800,0)});
+  $(".about").click(function(){scrollTo('#about',800,0);});
+  $(".brands").click(function(){scrollTo('#brands',1200,0);});
+  $(".jobs").click(function(){scrollTo('#jobs',1600,0);});
+  $(".contact").click(function(){scrollTo('#contact',1800,0);});
 });
