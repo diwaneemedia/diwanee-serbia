@@ -21,3 +21,16 @@ html {
     font-size:20px;
   }
 }
+b {
+  font-weight: bold;
+  font-weight: bold;
+  background: rgb(222, 222, 222);
+  color: black;
+  padding: 5px 9px;
+}
+.mobile-break {
+  display: none;
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}

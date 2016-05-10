@@ -72,6 +72,19 @@ html {
     html {
       font-size: 20px; } }
 
+b {
+  font-weight: bold;
+  font-weight: bold;
+  background: #dedede;
+  color: black;
+  padding: 5px 9px; }
+
+.mobile-break {
+  display: none; }
+  @media (max-width: 640px) {
+    .mobile-break {
+      display: block; } }
+
 .header__container {
   width: 100%;
   position: fixed;
@@ -81,6 +94,9 @@ html {
   @media (max-width: 640px) {
     .header__container {
       position: static; } }
+
+.jobs-page .header__container {
+  background: rgba(255, 255, 255, 0.8); }
 
 .header__wrapper, .content-wrapper {
   width: 100%;
@@ -95,9 +111,9 @@ html {
 
 .header {
   width: 100%;
-  height: 4rem;
+  height: 60px;
   color: black;
-  line-height: 4rem; }
+  line-height: 60px; }
   @media (max-width: 640px) {
     .header {
       height: auto;
@@ -196,9 +212,6 @@ html {
     .jobs-page .banner__container {
       margin-top: 0; } }
 
-.jobs-page .header__container {
-  background: white; }
-
 .header__banner {
   display: block;
   width: 100%;
@@ -242,6 +255,9 @@ html {
   width: 100%;
   margin-bottom: 19px; }
 
+.social > a:first-child {
+  margin-left: 17px; }
+
 .social__item {
   margin-right: 14px;
   margin-left: 13px;
@@ -258,6 +274,12 @@ html {
   @media (max-width: 640px) {
     .social__item {
       height: 25px; } }
+
+.twitt {
+  height: 24px !important; }
+
+.gplus {
+  height: 23px !important; }
 
 .location {
   color: white;
@@ -792,10 +814,10 @@ h2 {
   color: white;
   font-size: 0.86667rem;
   text-decoration: none;
-  -webkit-transition: background-color 500ms;
-  -o-transition: background-color 500ms;
-  -ms-transition: background-color 500ms;
-  transition: background-color 500ms; }
+  -webkit-transition: color 500ms;
+  -o-transition: color 500ms;
+  -ms-transition: color 500ms;
+  transition: color 500ms; }
   .job__button:hover {
     background: #393939; }
   @media (max-width: 640px) {

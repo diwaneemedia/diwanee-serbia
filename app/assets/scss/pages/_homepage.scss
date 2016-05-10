@@ -426,7 +426,7 @@ h2 {
   color: white;
   font-size:calc-rem( 13px);
   text-decoration: none;
-  @include transitionFor(background-color 500ms);
+  @include transitionFor(color 500ms);
   &:hover {
     background: #393939;
   }

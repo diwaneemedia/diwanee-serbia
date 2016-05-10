@@ -1,18 +1,27 @@
 
 // View more
 var position_on_click = 0;
+var animate_speed = 700;
 function viewMore(){
   if (!$(".read-more-button").hasClass("active")){
     position_on_click = $("body").scrollTop();
     $(".read-more-button").addClass("active");
-    $(".about__container").removeAttr("style");
+    smoothExpand('open');
     $(".read-more-button").html("SHOW LESS");
   } else {
     $(".read-more-button").removeClass("active");
-    var height = $(".about__text--first").height();
-    $(".about__container").css({"max-height":height+25+"px"});
+    smoothExpand("close");
     $(".read-more-button").html("READ MORE");
-    scrollTo("#about",0, 1);
+    scrollTo("#about",animate_speed, 1);
+  }
+}
+function smoothExpand(type){
+  if (type == 'open'){
+    var container_height = $('.about__text--left').height() + $(".about__text--right").height();
+    $(".about__container").animate({"max-height":container_height+'px'},animate_speed);
+  } else  if (type == 'close') {
+    var height = $(".about__text--first").height();
+    $(".about__container").animate({"max-height":height+25+"px"},animate_speed);
   }
 }
 function scrollTo(sectionId, speed, offset, event){

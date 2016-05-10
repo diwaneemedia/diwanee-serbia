@@ -23,6 +23,9 @@
   width: 100%;
   margin-bottom: 19px;
 }
+.social > a:first-child {
+  margin-left: 17px;
+}
 .social__item {
   margin-right: 14px;
   margin-left: 13px;
@@ -37,6 +40,12 @@
   @include breakpoint(mobile) {
     height: 25px;
   }
+}
+.twitt {
+  height: 24px !important;
+}
+.gplus {
+  height: 23px !important;
 }
 .location {
   color: white;
