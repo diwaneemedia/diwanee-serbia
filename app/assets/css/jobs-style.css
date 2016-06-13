@@ -414,7 +414,8 @@ b {
   font-size: 1.86667rem;
   letter-spacing: 3.6px;
   font-weight: 400;
-  line-height: 2.53333rem; }
+  line-height: 2.53333rem;
+  margin-bottom: 3.26667rem; }
 
 .small__heading {
   text-align: center;

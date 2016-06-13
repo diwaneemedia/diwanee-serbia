@@ -6,6 +6,7 @@
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico" />
   <link rel="stylesheet" href="assets/css/jobs-style.css">
   <title>Diwanee Serbia</title>
+  <meta property="fb:app_id" content="1168030989904013" />
   <!-- Google Tag Manager -->
   <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-5W2CLW"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -17,6 +18,23 @@
   <!-- End Google Tag Manager -->
 </head>
 <body class='jobs-page'>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1168030989904013',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
   <div class="header__container">
     <div class="header__wrapper">
       <div class="header">
@@ -38,7 +56,7 @@
     <h3 class='main-heading'>
       SENIOR PHP DEVELOPER
     </h3>
-    <p class="jobs-page-info">Deadline 25.05.2016</p>
+    <!-- <p class="jobs-page-info">Deadline 25.05.2016</p> -->
     <p class="main-text">
       Diwanee is a digital media company, with a unique offering and delivery
       of premium, original and trusted content for our international clients.
