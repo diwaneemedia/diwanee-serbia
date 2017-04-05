@@ -780,6 +780,15 @@ h2 {
       margin: 0 5%;
       border-bottom: 1px solid #ccc; } }
 
+.job--inactive .job__heading {
+  color: #ccc; }
+
+.job--inactive .job__button {
+  background: #ccc; }
+  .job--inactive .job__button:hover {
+    background: #ccc;
+    color: white; }
+
 .job--last {
   border-bottom: none; }
 

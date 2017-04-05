@@ -392,6 +392,16 @@ h2 {
     border-bottom: 1px solid #ccc;
   }
 }
+.job--inactive .job__heading {
+  color:#ccc;
+}
+.job--inactive .job__button {
+  background: #ccc;
+  &:hover {
+    background: #ccc;
+    color:white;
+  }
+}
 .job--last {
   border-bottom: none;
 }
