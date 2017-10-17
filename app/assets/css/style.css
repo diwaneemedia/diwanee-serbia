@@ -733,7 +733,8 @@ h2 {
   padding-left: 86px;
   margin-bottom: 167px;
   overflow: hidden;
-  padding: 0 240px; }
+  padding: 0 240px;
+  display: none; }
   @media (min-width: 2000px) {
     .jobs__container {
       padding: 0 120px; } }

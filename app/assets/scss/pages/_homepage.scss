@@ -343,7 +343,7 @@ h2 {
   margin-bottom: 167px;
   overflow: hidden;
   padding: 0 240px;
-
+  display: none;
   @include breakpoint(large) {
     padding: 0 120px;
   }
