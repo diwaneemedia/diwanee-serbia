@@ -733,8 +733,7 @@ h2 {
   padding-left: 86px;
   margin-bottom: 167px;
   overflow: hidden;
-  padding: 0 240px;
-  display: none; }
+  padding: 0 240px; }
   @media (min-width: 2000px) {
     .jobs__container {
       padding: 0 120px; } }
@@ -781,8 +780,14 @@ h2 {
       margin: 0 5%;
       border-bottom: 1px solid #ccc; } }
 
+.job--inactive {
+  display: none; }
+
 .job--inactive .job__heading {
   color: #ccc; }
+
+.job--inactive .tag {
+  color: #df9faa; }
 
 .job--inactive .job__button {
   background: #ccc; }

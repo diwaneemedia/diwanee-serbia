@@ -343,7 +343,7 @@ h2 {
   margin-bottom: 167px;
   overflow: hidden;
   padding: 0 240px;
-  display: none;
+  // display: none;
   @include breakpoint(large) {
     padding: 0 120px;
   }
@@ -392,8 +392,14 @@ h2 {
     border-bottom: 1px solid #ccc;
   }
 }
+.job--inactive {
+	display: none; // Uncomment this if you want to show grayed out inactive jobs
+}
 .job--inactive .job__heading {
   color:#ccc;
+}
+.job--inactive .tag {
+  color:#df9faa;
 }
 .job--inactive .job__button {
   background: #ccc;
