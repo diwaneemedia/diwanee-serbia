@@ -455,3 +455,6 @@ b {
   padding-bottom: 0.66667rem;
   list-style-type: disc;
   line-height: 1.6rem; }
+
+.jobs__container {
+  display: none; }
